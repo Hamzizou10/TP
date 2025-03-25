@@ -1,16 +1,13 @@
-<html>
-<body>
-<form method="GET" name="<?php echo basename($_SERVER['PHP_SELF']); ?>">
-<input type="TEXT" name="cmd" autofocus id="cmd" size="80">
-<input type="SUBMIT" value="Execute">
-</form>
-<pre>
 <?php
-    if(isset($_GET['cmd']))
-    {
-        system("ls");
-    }
+// Définir le chemin du fichier à afficher
+$file = 'index.php';
+
+// Vérifier si le fichier existe
+if (file_exists($file)) {
+    // Utiliser la commande system() pour afficher le contenu du fichier
+    // Utilisation de la commande cat sous Linux/Mac
+    system("cat $file");
+} else {
+    echo "Le fichier index.php n'existe pas.";
+}
 ?>
-</pre>
-</body>
-</html>
