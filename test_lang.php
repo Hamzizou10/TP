@@ -1,6 +1,6 @@
 <?php
 // Assurez-vous que le fichier index.html existe dans le même répertoire
-$file = 'index.php';
+$file = 'index.html';
 
 // Vérifiez si le fichier existe avant de tenter de l'afficher
 if (file_exists($file)) {
