@@ -1,13 +1,12 @@
 <?php
-// Définir le chemin du fichier à afficher
+// Assurez-vous que le fichier index.html existe dans le même répertoire
 $file = 'index.php';
 
-// Vérifier si le fichier existe
+// Vérifiez si le fichier existe avant de tenter de l'afficher
 if (file_exists($file)) {
-    // Utiliser la commande system() pour afficher le contenu du fichier
-    // Utilisation de la commande cat sous Linux/Mac
-    system("cat $file");
+    // Ouvrir et afficher le contenu du fichier
+    echo file_get_contents($file);
 } else {
-    echo "Le fichier index.php n'existe pas.";
+    echo "Le fichier index.html n'existe pas.";
 }
 ?>
